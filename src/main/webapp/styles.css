@@ -25,6 +25,7 @@ header {
 header h1 {
     font-size: 3rem;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 /* Navigation Bar */
@@ -60,9 +61,12 @@ section h2 {
     font-size: 2.5rem;
     color: #ffffff; /* White text for section titles */
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-section p {
+/* About Section */
+#about p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #e1eaff; /* Light text for readability */
@@ -107,11 +111,12 @@ section p {
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-10px); /* Elevates the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
 }
 
 .project-card h3 {
@@ -126,6 +131,8 @@ section p {
 .project-card a {
     color: #82aaff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .project-card a:hover {
@@ -157,5 +164,10 @@ footer p {
 
     section {
         padding: 20px 0;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
     }
 }
