@@ -13,7 +13,8 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    max-width: 1200px; /* This will limit the container width on large screens */
+    margin: 0 auto; /* This centers the content and adds space on both sides */
 }
 
 header {
