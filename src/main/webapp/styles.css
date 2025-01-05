@@ -1,57 +1,161 @@
+/* Global Styles */
 body {
+    background-color: #f0f4f8; /* Light greyish background for the whole page */
+    color: #ffffff; /* White text for readability */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffe4e1;
 }
 
+/* Container to center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
 header {
-    background: #ff4500;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #1a3a5e; /* Dark blue for the header */
+    color: #ffffff; /* White text */
+    padding: 30px 0;
+    text-align: center;
 }
 
-nav ul {
-    list-style: none;
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
     display: flex;
     justify-content: center;
-    padding: 0;
+    gap: 20px;
+    margin-top: 15px;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
+nav a {
+    color: #82aaff; /* Light blue for links */
+    font-size: 1.1rem;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1d68a7; /* Darker blue on hover */
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+    background-color: #2e4a7b; /* Slightly lighter blue shade */
 }
 
 section {
-    padding: 2rem;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* White text for section titles */
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e1eaff; /* Light text for readability */
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills div {
+    background-color: #1a3a5e;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
     text-align: center;
+    flex: 1;
+    max-width: 200px;
 }
 
-#about {
-    background: #ffcccb;
+.skills h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
 }
 
-#skills, #projects, #contact {
-    background: #fafad2;
-    margin: 1rem auto;
-    border: 1px solid #ffa500;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 80%;
-    max-width: 900px;
+.skills p {
+    color: #82aaff; /* Lighter blue for skill details */
 }
 
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1a3a5e;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Elevates the card on hover */
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #e1eaff;
+}
+
+.project-card a {
+    color: #82aaff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: #1d68a7;
+}
+
+/* Footer Section */
 footer {
+    background-color: #1a3a5e; /* Dark blue footer */
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
-    padding: 1rem;
-    background: #ff4500;
-    color: #fff;
-    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 20px 0;
+    }
 }
