@@ -1,173 +1,85 @@
-/* Global Styles */
-body {
-    background-color: #f0f4f8; /* Light greyish background for the whole page */
-    color: #ffffff; /* White text for readability */
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Container to center content */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 .container {
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
 }
 
-/* Header Section */
 header {
-    background-color: #1a3a5e; /* Dark blue for the header */
-    color: #ffffff; /* White text */
-    padding: 30px 0;
-    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem 0;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin: 0;
-    letter-spacing: 1px;
+    text-align: center;
 }
 
-/* Navigation Bar */
-nav {
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
+    list-style: none;
 }
 
-nav a {
-    color: #82aaff; /* Light blue for links */
-    font-size: 1.1rem;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #1d68a7; /* Darker blue on hover */
-}
-
-/* Main Content */
-main {
-    padding: 40px 0;
-    background-color: #2e4a7b; /* Slightly lighter blue shade */
+    font-weight: bold;
 }
 
 section {
-    margin-bottom: 40px;
+    padding: 2rem 0;
 }
 
-section h2 {
-    font-size: 2.5rem;
-    color: #ffffff; /* White text for section titles */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* About Section */
-#about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #e1eaff; /* Light text for readability */
-}
-
-/* Skills Section */
-.skills {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.skills div {
-    background-color: #1a3a5e;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
+h2 {
     text-align: center;
-    flex: 1;
-    max-width: 200px;
+    margin-bottom: 1rem;
 }
 
-.skills h3 {
-    font-size: 1.6rem;
-    color: #ffffff;
-}
-
-.skills p {
-    color: #82aaff; /* Lighter blue for skill details */
-}
-
-/* Projects Section */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: #1a3a5e;
-    border-radius: 8px;
-    padding: 20px;
+ul {
+    list-style: none;
     text-align: center;
-    color: #ffffff;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card:hover {
-    transform: translateY(-10px); /* Elevates the card on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
 }
 
-.project-card h3 {
-    font-size: 1.8rem;
+.project {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: #e1eaff;
+.project h3 {
+    margin-bottom: 0.5rem;
 }
 
-.project-card a {
-    color: #82aaff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.project-card a:hover {
-    color: #1d68a7;
-}
-
-/* Footer Section */
 footer {
-    background-color: #1a3a5e; /* Dark blue footer */
-    color: #ffffff;
-    padding: 20px;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
     text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    section {
-        padding: 20px 0;
-    }
-
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
 }
