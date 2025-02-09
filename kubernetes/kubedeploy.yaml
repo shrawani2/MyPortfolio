@@ -34,5 +34,4 @@ spec:
     - protocol: TCP
       port: 80          
       targetPort: 8080
-      nodePort: 30007     # Fixed NodePort for external access (range: 30000-32767)
   type: NodePort          # Exposes the service on each node's IP at a static port
