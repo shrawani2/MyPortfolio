@@ -1,37 +1,38 @@
+# Deployment with 3 replicas
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loksai-eta-deploy
+  name: my-app-deployment
   labels:
-    app: loksai-eta-deploy-lbl
+    app: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: loksai-eta-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: loksai-eta-app
+        app: my-app
     spec:
       containers:
-      - name: loksai-eta-container
+      - name: my-app-container
         image: shrawani2/my-app-svc1:latest
         ports:
         - containerPort: 8080
+
+# NodePort Service to expose the application
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: loksai-eta-np-service
-  labels:
-    app: loksai-eta-np-app
+  name: my-app-service
 spec:
   selector:
-    app: loksai-eta-deploy-lbl
-
-  type: NodePort
+    app: my-app
   ports:
-  - nodePort: 31028
-    port: 8080
-    targetPort: 8080
+    - protocol: TCP
+      port: 80          
+      targetPort: 8080
+      nodePort: 30007     # Fixed NodePort for external access (range: 30000-32767)
+  type: NodePort          # Exposes the service on each node's IP at a static port
